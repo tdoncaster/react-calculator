@@ -1,0 +1,55 @@
+<html>  
+  <head>
+    <title>Web Calculator</title>
+    <script src="script.js"></script>
+  </head>
+    <body style="background-color:lightgray">
+      <h1 style="text-align:center;">Web Calculator</h1>
+    <body>
+      <h1 style="text-align:center">Web Calculator</h1>
+      <form>
+        <input type= "number" id="a">
+        <span>+</span>
+        <input type= "number" id="b">
+        <input type= "button" value="=" onclick="sum()"/>
+    <span id="answer"></span>
+        <input type="number" id="num1"/>
+        <select id="operator">
+         <option value="+">+</option>
+         <option value="-">-</option>
+         <option value="*">*</option>
+         <option value="/">/</option>
+        <input type="number" id="num2"/>
+        </select>
+
+        <input type="button" value="=" onclick="calculate()" />
+
+
+        <span id="answer"></span>
+    </form>
+    </body>
+
+
+function calculate() {
+      var num1 = parseInt(document.getElementById('num1').value)
+      var num2 = parseInt(document.getElementById('num2').value)
+      var operator = document.getElementById('operator').value
+
+      document.getElementById('answer').innerHTML=calculateAnswer(operator, num1, num2)
+}
+    
+function calculateAnswer(operator, num1, num2) {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    case '/':
+      return num1 / num2;  
+    default:
+      return "invalid operation"    
+  }
+}
+© 2020 GitHub, Inc.
