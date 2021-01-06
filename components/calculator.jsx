@@ -35,7 +35,7 @@ export default () => {
   return (
     <div className="page">
       <div className="title">React Calculator</div>
-      <className input="num1" type="text" name="num1" onChange={event => setNum1(event.target.value)} />
+      <input className="num1" type="text" name="num1" onChange={event => setNum1(event.target.value)} />
       <select id="operator" onChange={event => setOperator(event.target.value)}>
 
         <option value="+">+</option>
@@ -43,7 +43,7 @@ export default () => {
         <option value="*">*</option>
         <option value="/">/</option>
       </select>
-      <input className="num2" type="text" name="num1" onChange={event => setNum2(event.target.value)} />
+      <input className="num2" type="text" name="num2" onChange={event => setNum2(event.target.value)} />
       <input className="calculateAnswer" type="button" value="=" onClick={calculateAnswer} />
       <input className="answer" type="text" name="answer" defaultValue={answer} />
       <div className="error">{error}</div>
